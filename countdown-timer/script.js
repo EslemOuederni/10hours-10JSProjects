@@ -17,10 +17,13 @@ function countdown(){
    // console.log(days, hours, minutes, second);
 
    daysEl.innerHTML = days;
-   hoursEl.innerHTML = hours;
-   minsEl.innerHTML = minutes;
-   secondsEl.innerHTML = second;
+   hoursEl.innerHTML = formatTime(hours);
+   minsEl.innerHTML = formatTime(minutes);
+   secondsEl.innerHTML = formatTime(second);
 
+}
+function formatTime(time) {
+    return time < 10 ? `0${time}` : time;
 }
 countdown();
 setInterval(countdown,1000);
