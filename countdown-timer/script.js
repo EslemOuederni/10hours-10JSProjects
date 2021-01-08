@@ -21,6 +21,13 @@ function countdown(){
    minsEl.innerHTML = formatTime(minutes);
    secondsEl.innerHTML = formatTime(second);
 
+   if( newYearsDate === currentDate || newYearsDate <= currentDate){
+       daysEl.innerHTML = "0";
+       hoursEl.innerHTML = "0";
+       minsEl.innerHTML = "0";
+       secondsEl.innerHTML = "0";
+   }
+
 }
 function formatTime(time) {
     return time < 10 ? `0${time}` : time;
